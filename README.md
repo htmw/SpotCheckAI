@@ -1,3 +1,5 @@
 # SpotCheckAI
 
-Installation Guide
+## Introduction
+
+## Installation Guide
