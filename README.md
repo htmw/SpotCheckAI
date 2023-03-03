@@ -1,0 +1,3 @@
+# SpotCheckAI
+
+Installation Guide
