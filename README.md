@@ -22,3 +22,9 @@ Note: Interface is not interactable on web-hosted website.
 To Install Locally:
 
 1. Clone Repository
+
+2. Install dependencies
+
+```
+pip install -r /path/to/requirements.txt
+```
