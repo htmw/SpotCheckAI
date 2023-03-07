@@ -11,8 +11,14 @@ Available on the web at: [insert website link here]
 To Install Locally:
 
 1. Clone Repository
-2. ''' cd path/to/frontend/folder '''
-3. ''' ionic serve '''
+2. 
+''' 
+cd path/to/frontend/folder 
+'''
+3. 
+'''
+ionic serve 
+'''
 
 
 ### Back End
