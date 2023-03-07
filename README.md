@@ -37,6 +37,6 @@ To Install Locally:
 pip install -r /path/to/requirements.txt
 ```
 4. ```cd path/to/backend/folder```
-5. ``` django manage.py runserver 7000```
+5. ```python manage.py runserver 7000```
 
 Note: port is to localhost 7000
