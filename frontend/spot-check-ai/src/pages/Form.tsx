@@ -31,7 +31,7 @@ const Form: React.FC = () => {
     const formData = new FormData(); //new form data instance
     formData.append('image', file!); //appends key:value pair to formData
   
-    axios.post('http://127.0.0.1:8000/api/posts/', formData) //sends formData to backend
+    axios.post('http://127.0.0.1:7000/api/posts/', formData) //sends formData to backend
       .then((response) => {
         console.log(response.data); //displays result in console
         // Do something with the response

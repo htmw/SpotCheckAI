@@ -6,9 +6,6 @@ from .models import Post
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated
-from rest_framework_api_key.permissions import HasAPIKey
-
 
 #for ML model
 from PIL import Image
@@ -29,7 +26,7 @@ class PostView(generics.CreateAPIView):
 
     def post (self, request):
         #load model
-        model = keras.models.load_model('/Users/raffertyleung/Desktop/cs691/models/imageclassifier.h5')
+        model = keras.models.load_model('/Users/raffertyleung/Desktop/cs691/2023S-Leung/models/imageclassifier.h5')
 
         #instantiates serializer
         serializer = self.get_serializer(data=request.data)
