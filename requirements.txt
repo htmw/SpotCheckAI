@@ -1,58 +1,27 @@
-absl-py==1.4.0
+anaconda-clean @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_be20dd64-61dd-41d9-bf38-a84695fe69507hs6olkf/croots/recipe/anaconda-clean_1652723729651/work
 asgiref==3.6.0
-astunparse==1.6.3
-cachetools==5.3.0
-certifi==2022.12.7
-charset-normalizer==3.0.1
-contourpy==1.0.7
-cycler==0.11.0
-Django==4.1.6
-django-cors-headers==3.13.0
-django-otp==1.1.4
-djangorestframework==3.14.0
-djangorestframework-api-key==2.3.0
-flatbuffers==23.1.21
-fonttools==4.38.0
-gast==0.4.0
-google-auth==2.16.0
-google-auth-oauthlib==0.4.6
-google-pasta==0.2.0
-grpcio==1.51.1
-h5py==3.8.0
-idna==3.4
-keras==2.11.0
-kiwisolver==1.4.4
-libclang==15.0.6.1
-Markdown==3.4.1
-MarkupSafe==2.1.2
-matplotlib==3.7.0
-numpy==1.24.2
-oauthlib==3.2.2
-opencv-python==4.7.0.68
-opt-einsum==3.3.0
-packaging==23.0
-Pillow==9.4.0
-protobuf==3.19.6
-pyasn1==0.4.8
-pyasn1-modules==0.2.8
-pyparsing==3.0.9
-pypng==0.20220715.0
-python-dateutil==2.8.2
-pytz==2022.7.1
-qrcode==7.4.2
-requests==2.28.2
-requests-oauthlib==1.3.1
-rsa==4.9
-six==1.16.0
+brotlipy==0.7.0
+certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_477u68wvzm/croot/certifi_1671487773341/work/certifi
+cffi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_1b0qzba5nr/croot/cffi_1670423213150/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+conda==23.1.0
+conda-content-trust @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_0afea0f9-bbf5-446c-8d60-8151cc05b029p0nco1nn/croots/recipe/conda-content-trust_1658126375910/work
+conda-package-handling @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_f5r7ncch6s/croot/conda-package-handling_1672865026931/work
+conda_package_streaming @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_619dxy_gif/croot/conda-package-streaming_1670508154637/work
+cryptography @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_0ayq9hu973/croot/cryptography_1673298756837/work
+Django==4.1.7
+idna @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_00jf0h4zbt/croot/idna_1666125573348/work
+pluggy @ file:///opt/concourse/worker/volumes/live/8277900c-164a-49c8-6f2a-f55c3c0154be/volume/pluggy_1648042581708/work
+pycosat @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_ebsmghz9nu/croot/pycosat_1666805511853/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pyOpenSSL @ file:///opt/conda/conda-bld/pyopenssl_1643788558760/work
+PySocks @ file:///Users/builder/ci_310/pysocks_1642536366386/work
+requests @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_516b78ce-034d-4395-b9b5-1d78c2847384qtnol99l/croots/recipe/requests_1657734628886/work
+ruamel.yaml @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_7de1zqcaou/croot/ruamel.yaml_1666304553877/work
+ruamel.yaml.clib @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_c7s0zxy4t2/croot/ruamel.yaml.clib_1666302244557/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
 sqlparse==0.4.3
-tensorboard==2.11.2
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.1
-tensorflow-estimator==2.11.0
-tensorflow-macos==2.11.0
-tensorflow-metal==0.7.1
-termcolor==2.2.0
-typing_extensions==4.4.0
-urllib3==1.26.14
-Werkzeug==2.2.2
-wrapt==1.14.1
+toolz @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a7gkswah88/croot/toolz_1667464082910/work
+tqdm @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_2adqcbsqqd/croots/recipe/tqdm_1664392689227/work
+urllib3 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_4cyi6_u2vj/croot/urllib3_1673575523861/work
+zstandard @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_c5lm04h6cy/croots/recipe/zstandard_1663827377465/work
