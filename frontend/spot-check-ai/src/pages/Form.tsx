@@ -1,7 +1,32 @@
-import { IonApp, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonItemDivider, IonItemGroup, IonLabel, IonMenu, IonMenuButton, IonPage, IonRow, IonSplitPane, IonTitle, IonToolbar, useIonLoading } from '@ionic/react';
+import { 
+  IonAlert,
+  IonApp, 
+  IonButton, 
+  IonButtons, 
+  IonCard, 
+  IonCardContent, 
+  IonCardHeader, 
+  IonCardTitle, 
+  IonCol, 
+  IonContent, 
+  IonGrid, 
+  IonHeader, 
+  IonIcon, 
+  IonItem, 
+  IonItemDivider, 
+  IonItemGroup, 
+  IonLabel, 
+  IonMenu, 
+  IonMenuButton,  
+  IonRow, 
+  IonSplitPane, 
+  IonTitle, 
+  IonToolbar, 
+  useIonLoading,
+} from '@ionic/react';
 import './Form.css';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { chatboxEllipses, documentText, help, home, informationCircle, personCircle } from 'ionicons/icons';
 
 
@@ -10,10 +35,16 @@ const Form: React.FC = () => {
   const [file, setFile] = useState(null);
   const [result, setResult] = useState(null);
   const [present, dismiss] = useIonLoading();
+  const [showAlert, setShowAlert] = useState(false);
 
   const headers = {
     Authorization: 'Api-Key WtNpAcPm', //python manage.py runserver strips custom headers --> need to try this in prod.
   }
+
+  //use effect instead of lifecycle event to show the alert once the component mounts
+  useEffect(() => {
+    setShowAlert(true);
+  }, []);
   
   //event object is used in event handlers to handle info about event that has occured
   const handleImageChange = (event:any) => {
@@ -45,6 +76,7 @@ const Form: React.FC = () => {
 
   return (
     <IonApp>
+      
       <IonContent>
       <IonSplitPane when="xl" contentId="main">
         <IonMenu contentId="main">
@@ -71,11 +103,11 @@ const Form: React.FC = () => {
                 <IonLabel>Information</IonLabel>
               </IonItemDivider>
 
-              <IonItem href="/aboutus" lines='none'>
+              <IonItem href="/about" lines='none'>
                 <IonIcon slot='start' icon={personCircle}></IonIcon>
                 <IonLabel>About Us</IonLabel>
               </IonItem>
-              <IonItem href="/aboutus" lines='none'>
+              <IonItem href="/info" lines='none'>
                 <IonIcon slot='start' icon={informationCircle}></IonIcon>
                 <IonLabel>Additional Information</IonLabel>
               </IonItem>
@@ -101,7 +133,7 @@ const Form: React.FC = () => {
                 <IonLabel>Contact</IonLabel>
               </IonItemDivider>
 
-              <IonItem href="/form" lines='none'>
+              <IonItem href="/contact" lines='none'>
                 <IonIcon slot='start' icon={help}></IonIcon>
                 <IonLabel>Contact Us</IonLabel>
               </IonItem>
@@ -111,14 +143,17 @@ const Form: React.FC = () => {
 
           <IonCard>
             <IonCardHeader>
-              <IonCardTitle>Disclaimer</IonCardTitle>
+              <IonCardTitle>Feedback</IonCardTitle>
             </IonCardHeader>
-            <IonCardContent>This is not a replacement for a doctor's visit. If you have emergent concerns, please consult your physician.</IonCardContent>
+            <IonCardContent>We want to know what you think of our platform! Please leave your feedback in the Contact Us page!</IonCardContent>
           </IonCard>
         </IonMenu>
       
         <div className="ion-page" id="main">
           <IonContent>
+            {
+              //page header
+            }
             <IonHeader>
               <IonToolbar>
                 <IonButtons slot="start">
@@ -127,11 +162,32 @@ const Form: React.FC = () => {
                 <IonTitle>Form</IonTitle>
               </IonToolbar>
             </IonHeader>
+
+            {
+              //video background
+            }
             <div id="video-container">
               <video muted autoPlay loop id="video-background">
                 <source src='../../assets/video/home-background.webm' type='video/webm'></source>
               </video>
             </div>
+
+            {
+              //ion alert on page load
+            }
+
+            <>
+              <IonAlert
+                isOpen={showAlert}
+                header="Disclaimer"
+                subHeader="Important message"
+                message="By utilizing this tool, you agree that this is not a replacement for a physician and that you should always consult a physician for any medical concerns."
+                backdropDismiss={false}
+                buttons={['Agree']}
+                onDidDismiss={() => setShowAlert(false)}
+              ></IonAlert>
+            </>
+              
 
             <div>
             <IonGrid>
@@ -194,10 +250,16 @@ const Form: React.FC = () => {
                 <IonCol size="12" sizeMd="6">
                   <IonCard>
                     <IonCardHeader>
-                      <IonCardTitle>Result</IonCardTitle>
+                      <IonCardTitle>Results</IonCardTitle>
                     </IonCardHeader>
                     <IonCardContent>
-                      {result}
+                      If result is less than 0.5, the model predicts that the lesion is benign/non-cancerous. If the result is greater than 0.5, the model predicts that the lesion is cancerous.
+                    </IonCardContent>
+                    <IonCardContent>
+                      If the predicted result is showing an error, please see contact us for further assistance.
+                    </IonCardContent>
+                    <IonCardContent>
+                      Predicted Result: {result}
                     </IonCardContent>
                   </IonCard>
                 </IonCol>
