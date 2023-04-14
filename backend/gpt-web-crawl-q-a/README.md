@@ -1,0 +1,1 @@
+Note: Python 3.10.7 is required for installing in this requirements.txt
