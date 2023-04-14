@@ -220,7 +220,7 @@ def answer_question(
     try:
         # Create a completions using the question and context
         response = openai.Completion.create(
-            prompt=f"Answer the question based on the context below, and if the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nQuestion: {question}\nAnswer:",
+            prompt=f"Answer the question based on the context below, and if the question can't be answered based on the context, say \"I don't know. Please email us so that we can further assist you\"\n\nContext: {context}\n\n---\n\nQuestion: {question}\nAnswer:",
             temperature=0,
             max_tokens=max_tokens,
             top_p=1,
