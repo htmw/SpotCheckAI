@@ -85,3 +85,4 @@ class QuestionResponseView(generics.CreateAPIView):
           print(e)
           return ""
 
+#save df locally as csv then import in when calling answer question
