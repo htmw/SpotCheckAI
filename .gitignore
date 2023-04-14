@@ -4,3 +4,7 @@ env-3.9/
 Sprint 1 Presentation Video.mp4
 MVP Video.mp4
 CS691 Project Deliverables.zip
+frontend/spot-check-ai/build/
+frontend/spot-check-ai/.firebase/
+frontend/spot-check-ai/.firebaserc
+frontend/spot-check-ai/firebase.json

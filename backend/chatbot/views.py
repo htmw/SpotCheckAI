@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from .models import QuestionResponse
 from .serializers import QuestionResponseSerializer
-from rest_framework import generics
+from rest_framework import generics, status
+from rest_framework.response import Response
+import pandas as pd 
 import openai
+
 
 
 # Create your views here.
@@ -11,6 +14,8 @@ class QuestionResponseView(generics.CreateAPIView):
     serializer_class=QuestionResponseSerializer
 
     openai.api_key = <API KEY HERE>
+
+    df = pd.read_csv('data/embeddings.csv') #check that this relative path is correct
 
     def create_context(self, question, df, max_len=1800, size="ada"):
       """
@@ -22,7 +27,6 @@ class QuestionResponseView(generics.CreateAPIView):
 
       # Get the distances from the embeddings
       df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
-
 
       returns = []
       cur_len = 0
@@ -86,3 +90,11 @@ class QuestionResponseView(generics.CreateAPIView):
           return ""
 
 #save df locally as csv then import in when calling answer question
+    def post(self, request):
+        serializer = QuestionResponseSerializer(data=request.data)
+        if serializer.is_valid():
+            response = self.answer_question(self.df, question=serializer.validated_data['question']) #check this code***
+            return Response(response, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+

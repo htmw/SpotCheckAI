@@ -4,6 +4,8 @@
 
 SpotCheckAI is a full-stack progressive web application (PWA) that can identify suspicious skin lesions as benign or cancerous. Users upload an image to the website and based on the Convolutional Neural Network Model, it will give a percentage of certainty that the model thinks is cancerous or benign.
 
+SpotCheckAI's chatbot is powered by OpenAI's GPT-3 model and can answer questions regarding the results received or the website.
+
 ## Installation Guide
 
 ### Front End
