@@ -101,6 +101,7 @@ class QuestionResponseView(generics.CreateAPIView):
 
             qa_response = answer_question(df, question)
 
+            #https://www.django-rest-framework.org/api-guide/generic-views/#createmodelmixin
             create = QuestionResponse.objects.create(question=question, response=qa_response)
             create.save()
             
