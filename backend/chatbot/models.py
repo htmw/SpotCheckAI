@@ -4,7 +4,7 @@ from django.db import models
 
 class QuestionResponse(models.Model):
     question = models.CharField(max_length=500)
-    response = models.CharField(max_length=1000)
+    response = models.CharField(max_length=1000, blank=True)
     time_stamp = models.DateTimeField(auto_now_add=True)
 
   #names the object with prediction 

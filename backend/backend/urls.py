@@ -23,6 +23,7 @@ admin.site.__class__ = OTPAdminSite
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('imageupload.urls')),
+    path('chat/', include('chatbot.urls'))
 ]
 
 
