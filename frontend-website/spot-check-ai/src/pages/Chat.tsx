@@ -47,7 +47,7 @@ const Chat: React.FC = () => {
     console.log("in handleChatClick");
     console.log(chatPrompt);
     
-    axios.post('http://localhost:8000/chat/qa/', {
+    axios.post('http://localhost:7000/chat/qa/', {
       question: chatPrompt,
     })
     .then(function (response) {
