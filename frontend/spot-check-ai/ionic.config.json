@@ -1,7 +1,0 @@
-{
-  "name": "spot-check-ai",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
