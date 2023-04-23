@@ -27,8 +27,7 @@ import { chatboxEllipses, documentText, help, home, informationCircle, personCir
 const Info: React.FC = () => {
 
   return (
-<IonApp>
-      
+    <IonApp>
       <IonContent>
       <IonSplitPane when="xl" contentId="main">
         <IonMenu contentId="main">
