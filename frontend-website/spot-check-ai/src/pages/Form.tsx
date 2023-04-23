@@ -207,11 +207,9 @@ const Form: React.FC = () => {
                       <IonCardTitle>Current Model Metrics</IonCardTitle>
                     </IonCardHeader>
                     <IonCardContent>
-                      <p>Model ID: ImageClassifier02222023</p>
-                      <p>Loss: 0.3981</p>
-                      <p>Accuracy: 0.815625</p>
-                      <p>Precision: 0.74556214</p>
-                      <p>Recall: 0.8873239</p>
+                      <p>Model ID: ImageClassifier04202023</p>
+                      <p>Loss: 0.4901</p>
+                      <p>Accuracy: 0.7718</p>
                     </IonCardContent>
                   </IonCard>
                 </IonCol>
