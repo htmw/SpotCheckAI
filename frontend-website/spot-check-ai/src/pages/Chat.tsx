@@ -17,10 +17,8 @@ import {
   IonItemDivider, 
   IonItemGroup, 
   IonLabel, 
-  IonList, 
   IonMenu, 
   IonMenuButton,  
-  IonRow, 
   IonSplitPane, 
   IonTitle, 
   IonToolbar, 
@@ -216,7 +214,7 @@ const Chat: React.FC = () => {
 
           <IonCard>
             <IonCardContent>
-              <IonInput placeholder="Enter your message here" onIonChange={handleChatPrompt} clearInput={true}/>
+              <IonInput placeholder="Enter your message here" onIonChange={handleChatPrompt} clearInput/>
               <IonButton onClick={handleChatClick}>Submit</IonButton>
             </IonCardContent>
           </IonCard>

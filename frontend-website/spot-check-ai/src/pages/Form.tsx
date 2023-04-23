@@ -22,7 +22,6 @@ import {
   IonSplitPane, 
   IonTitle, 
   IonToolbar, 
-  useIonLoading,
 } from '@ionic/react';
 import './Form.css';
 import axios from 'axios';
@@ -34,12 +33,7 @@ const Form: React.FC = () => {
 
   const [file, setFile] = useState(null);
   const [result, setResult] = useState(null);
-  const [present, dismiss] = useIonLoading();
   const [showAlert, setShowAlert] = useState(false);
-
-  const headers = {
-    Authorization: 'Api-Key WtNpAcPm', //python manage.py runserver strips custom headers --> need to try this in prod.
-  }
 
   //use effect instead of lifecycle event to show the alert once the component mounts
   useEffect(() => {

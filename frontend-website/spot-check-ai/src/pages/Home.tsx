@@ -1,4 +1,24 @@
-import { IonApp, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonContent, IonHeader, IonIcon, IonImg, IonItem, IonItemDivider, IonItemGroup, IonLabel, IonList, IonMenu, IonMenuButton, IonPage, IonSplitPane, IonTitle, IonToolbar } from '@ionic/react';
+import { 
+  IonApp, 
+  IonButton, 
+  IonButtons, 
+  IonCard, 
+  IonCardContent, 
+  IonCardHeader, 
+  IonCardTitle, 
+  IonContent, 
+  IonHeader, 
+  IonIcon, 
+  IonItem, 
+  IonItemDivider, 
+  IonItemGroup, 
+  IonLabel, 
+  IonMenu, 
+  IonMenuButton, 
+  IonSplitPane, 
+  IonTitle, 
+  IonToolbar 
+} from '@ionic/react';
 import './Home.css';
 import { chatboxEllipses, documentText, help, home, informationCircle, personCircle } from 'ionicons/icons';
 
