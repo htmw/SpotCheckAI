@@ -218,24 +218,25 @@ const Form: React.FC = () => {
                   <IonCard>
                     <IonCardHeader>
                       <IonCardTitle>Submit Photo</IonCardTitle>
-                      <IonCardContent>
-                        <form id='predict-photo' onSubmit={handleFormSubmit}>
-                          <p>Only Image Files are Accepted</p>
-                          <p>png, jpeg, jpg, bmp</p>
-                          <p>
-                            <input type="file"
-                              id="the-image"
-                              accept="image/png, image/jpeg, image/jpg, image/bmp" 
-                              onChange={handleImageChange} 
-                              required
-                            />
-                          </p>
-                          <IonButton type="submit">
-                            Submit
-                          </IonButton>
-                        </form>
-                      </IonCardContent>
                     </IonCardHeader>
+
+                    <IonCardContent>
+                      <form id='predict-photo' onSubmit={handleFormSubmit}>
+                        <p>Only Image Files are Accepted</p>
+                        <p>png, jpeg, jpg, bmp</p>
+                        <p>
+                          <input type="file"
+                            id="the-image"
+                            accept="image/png, image/jpeg, image/jpg, image/bmp" 
+                            onChange={handleImageChange} 
+                            required
+                          />
+                        </p>
+                        <IonButton type="submit">
+                          Submit
+                        </IonButton>
+                        </form>
+                    </IonCardContent>
                   </IonCard>
                 </IonCol>
 
@@ -250,9 +251,14 @@ const Form: React.FC = () => {
                     <IonCardContent>
                       If the predicted result is showing an error, please see contact us for further assistance.
                     </IonCardContent>
-                    <IonCardContent>
-                      Predicted Result: {result}
-                    </IonCardContent>
+
+                    <IonCard>
+                    <IonCardHeader>
+                      <IonCardTitle>
+                        Predicted Result: {result}
+                      </IonCardTitle>
+                    </IonCardHeader>
+                    </IonCard>
                   </IonCard>
                 </IonCol>
 
