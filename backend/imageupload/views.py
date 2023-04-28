@@ -26,7 +26,7 @@ class PostView(generics.CreateAPIView):
 
     def post (self, request):
         #load model
-        model = keras.models.load_model('/Users/raffertyleung/Desktop/cs691/2023S-Leung/models/imageclassifier.h5')
+        model = keras.models.load_model('./data/imageclassifier-resnet50.h5')
 
         #instantiates serializer
         serializer = self.get_serializer(data=request.data)
