@@ -39,6 +39,13 @@ const Chat: React.FC = () => {
     }
   ]);
 
+  useEffect(() => {
+    if (chatResponse) {
+      handleChatResponse();
+    }
+  }, [chatResponse]);
+
+
   const handleChatPrompt = (event:any) => {
     setChatPrompt(event.target.value);
   };
@@ -47,7 +54,7 @@ const Chat: React.FC = () => {
     console.log("in handleChatClick");
     console.log(chatPrompt);
     
-    axios.post('http://localhost:7000/chat/qa/', {
+    axios.post('http://127.0.0.1:7000/chat/qa/', {
       question: chatPrompt,
     })
     .then(function (response) {
@@ -64,11 +71,6 @@ const Chat: React.FC = () => {
 
   //if statement: if chat response is not null or undefined
   //use effect: will call handleChatResponse() only if chatResponse changes (the second argument)
-  useEffect(() => {
-    if (chatResponse) {
-      handleChatResponse();
-    }
-  }, [chatResponse]);
 
   function handleChatResponse () {
     console.log("in handleChatResponse()");
@@ -214,7 +216,7 @@ const Chat: React.FC = () => {
 
           <IonCard>
             <IonCardContent>
-              <IonInput placeholder="Enter your message here" onIonChange={handleChatPrompt} clearInput/>
+              <IonInput placeholder="Enter your message here" clearOnEdit={true} onIonInput={handleChatPrompt} clearInput/>
               <IonButton onClick={handleChatClick}>Submit</IonButton>
             </IonCardContent>
           </IonCard>

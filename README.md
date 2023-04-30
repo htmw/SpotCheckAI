@@ -6,6 +6,9 @@ SpotCheckAI is a full-stack progressive web application (PWA) that can identify 
 
 SpotCheckAI's chatbot is powered by OpenAI's GPT-3 model and can answer questions regarding the results received or the website.
 
+[SpotCheckAI's Webpage](https://raleung2-capstone-spotcheckai.web.app/home)
+
+
 ## Installation Guide
 
 ### Front End
