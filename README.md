@@ -13,7 +13,7 @@ SpotCheckAI's chatbot is powered by OpenAI's GPT-3 model and can answer question
 
 ### Front End
 
-Available on the web at: [insert website link here]
+Available on the web at: https://raleung2-capstone-spotcheckai.web.app/home
 
 To Install Locally:
 
@@ -26,7 +26,7 @@ Note: Port is to localhost 8000
 
 ### Back End
 
-Available on the web at: [insert website link here]
+Available on the web at: Only available locally
 
 Note: Interface is not interactable on web-hosted website.
 
